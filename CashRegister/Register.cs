@@ -23,7 +23,7 @@ namespace CashRegister
                 )
                 throw new ArgumentOutOfRangeException("Prisen er ukorrekt");
 
-            _total += itemPrice;
+            _total = itemPrice;
             NoOfItems++;
         }
 

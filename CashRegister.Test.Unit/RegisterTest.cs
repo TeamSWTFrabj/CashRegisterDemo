@@ -50,6 +50,17 @@ namespace CashRegister.Test.Unit
         }
 
         [Test]
+        public void AddItem_TwoItems_TotalIsCorrect()
+        {
+            // Act
+            uut.AddItem(11.22);
+            uut.AddItem(22.33);
+
+            // Assert
+            Assert.That(uut.GetTotal(), Is.EqualTo(33.55).Within(0.005));
+        }
+
+        [Test]
         public void ctor_NoItemsAdded_NoOfItemsIsZero()
         {
             // Arrange er i SetUp
